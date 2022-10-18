@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import SurveyItem from './components/SurveyItem';
+import { surveyList } from './api/surveyList.js';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const allSurveys = surveyList.map((survey, i) => {
+    return (
+      <SurveyItem
+        key={i}
+        name={survey.name}
+        image={survey.image}
+        completesLeft={survey.completesLeft}
+        completionTime={survey.completionTime}
+        qualificationsForSurvey={survey.qualificationsForSurvey}
+        virtualCurrency={survey.virtualCurrency}
+      />
+    );
+  });
+
+  return <div className='flex flex-wrap justify-center my-8'>{allSurveys}</div>;
 }
 
 export default App;
