@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Screenshot of the Wall
+![Survey-wall-design](https://user-images.githubusercontent.com/68850550/197035960-d004cdb9-c757-4c84-b085-5d5550d2ba21.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
